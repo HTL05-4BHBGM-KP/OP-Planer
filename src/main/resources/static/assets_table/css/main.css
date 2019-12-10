@@ -71,8 +71,10 @@ textarea:focus, input:focus {
 /* ------------------------------------ */
 button {
 	outline: none !important;
-	border: none;
-	background: transparent;
+  border: 0px;
+  border-radius: 5px;
+  background: green;
+  box-shadow: #555555;
 }
 
 button:hover {
@@ -192,33 +194,32 @@ tbody tr:hover {
   cursor: pointer;
 }
 
-.column1 {
-  width: 260px;
+.first {
+  width: 160px;
   padding-left: 40px;
 }
 
-.column2 {
+.date {
   width: 160px;
 }
 
-.column3 {
-  width: 245px;
+.short {
+  width: 160px;
 }
 
-.column4 {
-  width: 110px;
-  text-align: right;
+.name {
+  width: 260px;
+  text-align: left;
 }
 
 .column5 {
-  width: 170px;
+  width: 260px;
   text-align: right;
 }
 
-.column6 {
-  width: 222px;
-  text-align: right;
-  padding-right: 62px;
+.last {
+  width: 260px;
+  padding-right: 40px;
 }
 
 
@@ -255,22 +256,22 @@ tbody tr:hover {
     top: 0;
   }
   table tbody tr td:nth-child(1):before {
-    content: "Date";
+    content: "Zeitpunkt";
   }
   table tbody tr td:nth-child(2):before {
-    content: "Order ID";
+    content: "OP-Saal";
   }
   table tbody tr td:nth-child(3):before {
-    content: "Name";
+    content: "Patient-SVNR";
   }
   table tbody tr td:nth-child(4):before {
-    content: "Price";
+    content: "Patient-Vorname";
   }
   table tbody tr td:nth-child(5):before {
-    content: "Quantity";
+    content: "Patient-Nachname";
   }
   table tbody tr td:nth-child(6):before {
-    content: "Total";
+    content: "Krankheit";
   }
 
   .column4,

@@ -116,10 +116,12 @@ public class MainController {
 
 	@GetMapping("/operations")
     public String home(Model model, Principal principal) {
+		List<Operation> op = operationRepository.findAllOperatione();
         //String userName = principal.getName(); 
-        //User user = userRepository.findUserByName(userName);
-        //model.addAttribute("user", user);    
-		return "form_addop";
+		//User user = userRepository.findUserByName(userName);
+		System.out.println(op);
+        model.addAttribute("operations", op);    
+		return "tableAllop";
     }
 
 }

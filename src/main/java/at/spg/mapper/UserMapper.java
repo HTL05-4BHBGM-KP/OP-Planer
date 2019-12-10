@@ -3,17 +3,12 @@ package at.spg.mapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import at.spg.dao.RolleRepository;
 import at.spg.model.Rolle;
 import at.spg.model.User;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
  
 public class UserMapper implements RowMapper<User> {
-
-    @Autowired
-    private RolleRepository rolerepository;
  
     public static final String SELECT_SQL //
             = "SELECT * FROM u_user inner join r_rollen on r_kuerzel = u_user_rolle";
