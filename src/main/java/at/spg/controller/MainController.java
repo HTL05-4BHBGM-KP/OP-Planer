@@ -114,12 +114,12 @@ public class MainController {
 		return "table_allop";
     }
 
-	@GetMapping("/home")
+	@GetMapping("/operations")
     public String home(Model model, Principal principal) {
         //String userName = principal.getName(); 
         //User user = userRepository.findUserByName(userName);
         //model.addAttribute("user", user);    
-		return "home";
+		return "form_addop";
     }
 
 }

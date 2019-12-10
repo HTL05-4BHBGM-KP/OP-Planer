@@ -29,7 +29,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         }
  
         List<String> roleNames = new ArrayList<String>();
-        roleNames.add("SOME_ROLE");
+        roleNames.add(user.getRolle().getBezeichnung());
         roleNames.add("ANOTHER_ROLE");
         
         List<GrantedAuthority> grantList = new ArrayList<GrantedAuthority>();

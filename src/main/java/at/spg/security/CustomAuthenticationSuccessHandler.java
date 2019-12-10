@@ -25,6 +25,6 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
         		    ", IP Adresse: " + request.getRemoteAddr());
         
         response.setStatus(HttpServletResponse.SC_OK);      
-        response.sendRedirect("/home");
+        response.sendRedirect("/operations");
     }      
   }

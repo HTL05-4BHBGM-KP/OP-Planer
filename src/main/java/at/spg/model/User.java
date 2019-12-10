@@ -6,15 +6,15 @@ public class User {
 	private String vorname;
     private String nachname;
     private String passwort;
-    //private Rolle rolle;
+    private Rolle rolle;
     private String kuerzel;
 
-    public User(Long id, String vorname, String nachname, String passwort, String kuerzel) {
+    public User(Long id, String vorname, String nachname, String passwort, String kuerzel, Rolle rolle) {
         this.id = id;
         this.vorname = vorname;
         this.nachname = nachname;
         this.passwort = passwort;
-        //this.rolle = rolle;
+        this.rolle = rolle;
         this.kuerzel = kuerzel;
     }
 
@@ -50,13 +50,13 @@ public class User {
         this.passwort = passwort;
     }
 
-    /*public Rolle getRolle() {
+    public Rolle getRolle() {
         return rolle;
     }
 
     public void setRolle(Rolle rolle) {
         this.rolle = rolle;
-    }*/
+    }
 
     public String getKuerzel() {
         return kuerzel;
@@ -69,7 +69,7 @@ public class User {
     @Override
     public String toString() {
         return "User [id=" + id + ", kuerzel=" + kuerzel + ", nachname=" + nachname + ", passwort=" + passwort
-                + ", vorname=" + vorname + "]";
+                + ", rolle=" + rolle + ", vorname=" + vorname + "]";
     }
 
 

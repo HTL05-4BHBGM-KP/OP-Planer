@@ -56,13 +56,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().antMatchers("/assets/**").permitAll();
 
 		// Sonst Authentifizierung
-		http.authorizeRequests().anyRequest().authenticated();
+        http.authorizeRequests().anyRequest().authenticated();
+        
+        //Chirurg
+        //http.authorizeRequests().antMatchers("/operation").hasRole("Chirurg");
 
 	    // Konfiguration des Logins
         http.formLogin()
           .loginProcessingUrl("/j_spring_security_check")
           .loginPage("/login")
-          .defaultSuccessUrl("/home")
+          .defaultSuccessUrl("/operations")
           .successHandler(authenticationSuccessHandler)
           .failureHandler(authenticationFailureHandler)
           .usernameParameter("kuerzel")
