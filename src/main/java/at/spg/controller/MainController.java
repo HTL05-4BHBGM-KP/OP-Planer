@@ -66,9 +66,9 @@ public class MainController {
 
 	@GetMapping("/rollen")
 	public String doctors(Model model) {
-	    List<Rolle> list = rolleRepository.findAllRolles();
-	    model.addAttribute("rol", list);  
-		return "rollen";
+	    /*List<Rolle> list = rolleRepository.findAllRolles();
+	    model.addAttribute("rol", list);*/ 
+		return "form_addop";
 	}	
 
 	@GetMapping("/operationen")
@@ -111,7 +111,7 @@ public class MainController {
 
 	@GetMapping("/admin")
     public String admin() {
-		return "admin";
+		return "table_allop";
     }
 
 	@GetMapping("/home")
